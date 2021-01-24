@@ -51,6 +51,8 @@
     <Compile Include="Graph\GraphBase.cs" />
     <Compile Include="Graph\GraphTraversalUtils.cs" />
     <Compile Include="Heap\HeapHelpers.cs" />
+    <Compile Include="Heap\MinHeap.cs" />
+    <Compile Include="KadaneAlgo\KadaneMaxSubArray.cs" />
     <Compile Include="KnapsackProblem\KnapsackBottomUp.cs" />
     <Compile Include="KnapsackProblem\KnapsackMemoize.cs" />
     <Compile Include="LongestCommonSubsequence\LCSMemoize.cs" />
@@ -61,6 +63,8 @@
     <Compile Include="SinglyLinkedList\LinkedList.cs" />
     <Compile Include="SinglyLinkedList\Node.cs" />
     <Compile Include="StringAlgos\FindAndReplace.cs" />
+    <Compile Include="Trie\Trie.cs" />
+    <Compile Include="Trie\TrieNode.cs" />
     <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup>

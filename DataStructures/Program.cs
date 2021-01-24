@@ -1,9 +1,12 @@
 ﻿using DataStructures.Graph;
+using DataStructures.Heap;
+using DataStructures.KadaneAlgo;
 using DataStructures.StringAlgos;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,6 +16,22 @@ namespace DataStructures
     {
         static void Main(string[] args)
         {
+            KadaneMaxSubArray kadaneMaxSubArray = new KadaneMaxSubArray();
+            var result = kadaneMaxSubArray.GetMaxSubArrayValue(new int[] { -2, -3, -1, -5, 5, -6, 7, 1});
+            Console.WriteLine(result);
+
+            //MinHeap minHeap = new MinHeap(5);
+            //minHeap.Insert(7);
+            //minHeap.Insert(3);
+            //minHeap.Insert(9);
+            //minHeap.Insert(1);
+            //minHeap.Insert(70);
+            //minHeap.Insert(100);
+            //int x = minHeap.Remove(); //Error with '9'
+            //x = minHeap.Remove(); //Error with '9'
+            //x = minHeap.Remove(); //Error with '9'. issue here. Fixed :)
+            //x = minHeap.Remove(); //Error with '9'
+
             //FindAndReplace findReplace = new FindAndReplace();
             //Console.WriteLine(findReplace.ReplacePattern(new StringBuilder("geeksforgeeks"), "eks"));
 

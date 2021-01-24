@@ -4,6 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+// refer this instead - https://www.youtube.com/watch?v=t0Cq6tVNRBA
+// It uses concept of "heapifyup" (once element is removed)
+// and "heapifydown" (once a new element is added)
+// TODO - Implement it.
 namespace DataStructures.Heap
 {
     public class HeapHelpers

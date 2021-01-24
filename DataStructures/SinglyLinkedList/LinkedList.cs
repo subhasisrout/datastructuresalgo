@@ -57,7 +57,7 @@ namespace DataStructures.SinglyLinkedList
                 current = next;
             }
             //out of the above 4 lines in the loop, line 2,3 does the work. While line 1,4 are just for iteration.
-            head = prev;
+            head = prev; //head cannot be set to current (as current is now NULL), prev was last NOT-NULL current value
             return head;
         }
 

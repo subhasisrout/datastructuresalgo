@@ -10,10 +10,10 @@ namespace DataStructures.LongestCommonSubsequence
     //Adding 3 extra lines converts recursion to MEMOIZED DP Solution
     public class LCSMemoize
     {
-        int[,] arrMemo;
+        int[,] arrMemo; // Instead of 2d array, we can use a Dictionary<string,int>. key would be "len1-len2"
         int result = -1;
         public int LCS(string p, string q)
-        {            
+        {
             arrMemo = new int[p.Length, q.Length];  //MEMOIZE Line 1 - instantiate a n*m matrix with all values -1
             for (int i = 0; i < p.Length; i++)
             {
@@ -42,3 +42,39 @@ namespace DataStructures.LongestCommonSubsequence
         }
     }
 }
+
+
+/* Using Dictionary as a memo in Leetcode
+public class Solution {
+    int result = 0;
+    Dictionary<string, int> memo = new Dictionary<string, int>();
+    public int LongestCommonSubsequence(string text1, string text2) {
+        if (text1 == null || text1.Length == 0 || text2 == null || text2.Length == 0)
+            return 0;
+        return LCSHelper(text1, text2, text1.Length, text2.Length);
+    }
+    public int LCSHelper(string p, string q, int lenP, int lenQ)
+    {
+        if (memo.ContainsKey(lenP+"-"+lenQ)) return memo[lenP+"-"+lenQ];            
+        if (lenP == 0 || lenQ == 0)
+            result = 0;
+        else if (p[lenP - 1] == q[lenQ - 1])
+            result = 1 + LCSHelper(p,q,lenP-1,lenQ-1);
+        else
+        {
+            int tmp1 = LCSHelper(p,q,lenP-1,lenQ);
+            int tmp2 = LCSHelper(p,q,lenP,lenQ-1);
+            result = Math.Max(tmp1, tmp2);            
+        }
+        memo[lenP+"-"+lenQ] = result;
+        return result;
+    }
+}
+
+
+
+
+
+
+*/
+
