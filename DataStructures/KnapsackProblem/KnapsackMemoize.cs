@@ -24,10 +24,10 @@ namespace DataStructures.KnapsackProblem
         public int KnapsackMaxValue()
         {
             int n = W.Length - 1;
-            return KS(n, capacity);
+            return KS(n, capacity); //KS value till nth element with remaining capacity C
         }
 
-        public int KS(int n, int C)
+        public int KS(int n, int C) //KS value till nth element with remaining capacity C
         {
             if (n == 0 || C == 0)
                 result = 0;

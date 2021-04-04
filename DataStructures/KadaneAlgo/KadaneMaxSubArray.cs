@@ -7,17 +7,17 @@ namespace DataStructures.KadaneAlgo
 {
     public class KadaneMaxSubArray
     {
-        public int GetMaxSubArrayValue(int[] arr)
+        public int GetMaxSubArrayValue(int[] nums)
         {
-            if (arr == null || arr.Length == 0)
+            if (nums == null || nums.Length == 0)
                 throw new ArgumentNullException();
 
             int globalMax = Int32.MinValue;
             int localMax = 0;
 
-            for (int i = 0; i < arr.Length; i++)
+            for (int i = 0; i < nums.Length; i++)
             {
-                localMax = Math.Max(arr[i], localMax + arr[i]);
+                localMax = Math.Max(nums[i], localMax + nums[i]);
                 globalMax = Math.Max(globalMax, localMax);
             }
             return globalMax;

@@ -46,6 +46,7 @@
     <Compile Include="BinarySearchTree\BinaryTree.cs" />
     <Compile Include="BinarySearchTree\Node.cs" />
     <Compile Include="BinarySearch\BinarySearchUtils.cs" />
+    <Compile Include="BubbleSortAE.cs" />
     <Compile Include="Graph\AdjacencyMatrixGraph.cs" />
     <Compile Include="Graph\AdjacencySetGraph.cs" />
     <Compile Include="Graph\GraphBase.cs" />
@@ -64,7 +65,7 @@
     <Compile Include="SinglyLinkedList\Node.cs" />
     <Compile Include="StringAlgos\FindAndReplace.cs" />
     <Compile Include="Trie\Trie.cs" />
-    <Compile Include="Trie\TrieNode.cs" />
+    <Compile Include="Trie\Node.cs" />
     <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup>
